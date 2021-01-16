@@ -24,6 +24,7 @@ module.exports = {
       filename: "index.html",
       template: "./src/index.html",
       minify: true,
+      inject: false,
     }),
   ],
 };
