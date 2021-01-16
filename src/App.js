@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import DOMPurify from "dompurify";
+const marked = require("marked");
 
 export const App = () => {
   const [textMd, setTextMd] = useState("sdfsdf");
@@ -10,7 +12,10 @@ export const App = () => {
         value={textMd}
         onChange={(e) => setTextMd(e.target.value)}
       />
-      <p id="preview">{textMd}</p>
+      <p
+        id="preview"
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked(textMd)) }}
+      ></p>
     </>
   );
 };
