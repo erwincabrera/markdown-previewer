@@ -11,3 +11,36 @@ body {
 ::placeholder {
   color: gray;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.app {
+  display: flex;
+
+  @media (max-aspect-ratio: 1/1) {
+    flex-direction: column;
+  }
+
+  max-width: 1024px;
+  height: 100vh;
+  margin: 0 auto;
+
+  textarea,
+  textarea:focus,
+  textarea:active {
+    flex: 1;
+    resize: none;
+    outline: none;
+    border: 1px solid black;
+  }
+
+  .preview {
+    flex: 1;
+    overflow: auto;
+    border: 1px solid black;
+    margin: 0;
+  }
+}
