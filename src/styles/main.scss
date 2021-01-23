@@ -17,6 +17,13 @@ img {
   height: auto;
 }
 
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .app {
   display: flex;
 
@@ -24,9 +31,11 @@ img {
     flex-direction: column;
   }
 
+  margin: 0 1em;
+
   max-width: 1024px;
-  height: 100vh;
-  margin: 0 auto;
+  height: 95vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   textarea,
   textarea:focus,
@@ -34,13 +43,20 @@ img {
     flex: 1;
     resize: none;
     outline: none;
-    border: 1px solid black;
+    padding: 1em;
+    border: none;
+    border-right: 3px solid #e8e8e8;
+
+    @media (max-aspect-ratio: 1/1) {
+      border-right: none;
+      border-bottom: 3px solid #e8e8e8;
+    }
   }
 
   .preview {
     flex: 1;
     overflow: auto;
-    border: 1px solid black;
+    padding: 1em;
     margin: 0;
   }
 }
