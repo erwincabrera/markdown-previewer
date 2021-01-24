@@ -35,7 +35,6 @@ const loadScript = (source, beforeEl, async = true, defer = true) => {
 (() => {
   const query = window.location.search.substring(1);
   const vars = query.split("&");
-  console.log(vars);
   for (let param of vars) {
     const [varName, val] = param.split("=");
     if (varName == "fcc" && val === "true") {
