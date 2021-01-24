@@ -39,7 +39,6 @@ export const App = () => {
   return (
     <div className="app">
       <textarea
-        className
         id="editor"
         value={textMd}
         onChange={(e) => setTextMd(e.target.value)}
